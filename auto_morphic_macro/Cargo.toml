@@ -1,0 +1,19 @@
+[package]
+name = "auto_morphic_macro"
+version = "0.1.0"
+edition = "2024"
+description = "Procedural macro for auto_morphic — generates impl Morph<T> from #[derive(AutoMorph)]"
+repository = "https://github.com/alexdev/auto_morphic"
+license = "MIT"
+
+[lib]
+proc-macro = true
+
+[features]
+serde-integration = []
+
+[dependencies]
+syn = { version = "3.0.10", features = ["full", "derive"] }
+quote = "1.0.47"
+proc-macro2 = "1.0.107"
+auto_morphic_core = { path = "../auto_morphic_core" }

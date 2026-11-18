@@ -1,0 +1,9 @@
+[package]
+name = "auto_morphic_core"
+version = "0.1.0"
+edition = "2024"
+description = "Core traits for auto_morphic: Morph, MorphResult, and MorphError"
+repository = "https://github.com/alexdev/auto_morphic"
+license = "MIT"
+
+[dependencies]

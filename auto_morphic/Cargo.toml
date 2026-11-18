@@ -1,0 +1,27 @@
+[package]
+name = "auto_morphic"
+version = "0.1.0"
+edition = "2024"
+description = "Zero-cost struct-to-struct mapping with derive macro — rename fields, transforms, skip, default, enums, and fallible morphing"
+repository = "https://github.com/alexdev/auto_morphic"
+documentation = "https://docs.rs/auto_morphic"
+homepage = "https://github.com/alexdev/auto_morphic"
+readme = "../README.md"
+keywords = ["mapping", "mapper", "dto", "transform", "derive"]
+categories = ["rust-patterns", "data-structures"]
+license = "MIT"
+
+[dependencies]
+auto_morphic_core = { path = "../auto_morphic_core" }
+auto_morphic_macro = { path = "../auto_morphic_macro" }
+
+[features]
+serde-integration = ["auto_morphic_macro/serde-integration"]
+
+[dev-dependencies]
+serde = { version = "1", features = ["derive"] }
+criterion = "0.5"
+
+[[bench]]
+name = "morph_bench"
+harness = false

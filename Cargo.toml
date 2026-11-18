@@ -1,0 +1,3 @@
+[workspace]
+members = ["auto_morphic", "auto_morphic_macro", "auto_morphic_core"]
+resolver = "2"
